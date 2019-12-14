@@ -1,0 +1,7 @@
+Bg Violet: #241a3d
+Dark Violet: #8e2991
+Light Violet:#d9177a
+Orange: #fc5b2d
+Red: #f1152f
+Blue: #2b5794
+Green: #007386

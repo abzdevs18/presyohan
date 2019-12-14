@@ -1,0 +1,12 @@
+.cat {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+@media screen and (max-width: 600px) {
+	.cat {
+		flex-direction: column;
+	}
+}
