@@ -2,8 +2,10 @@
 session_start();
 $message="";
 if(count($_POST)>0) {
-$conn = mysql_connect("localhost","qdigdeio_wp1901","qdigdeio_wp1901");
-mysql_select_db("qdigdeio_wp1901",$conn);
+// $conn = mysql_connect("localhost","qdigdeio_wp1901","qdigdeio_wp1901");
+// mysql_select_db("qdigdeio_wp1901",$conn);
+
+include 'db_connect.php';
 $result = mysql_query("SELECT * FROM users WHERE email='" . $_POST["email"] . "' and pw = '". $_POST["pw"]."'");
 $row  = mysql_fetch_array($result);
 if(is_array($row)) {

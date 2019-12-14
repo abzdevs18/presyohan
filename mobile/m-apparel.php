@@ -2,8 +2,10 @@
 session_start();
 $message="";
 if(count($_POST)>0) {
-$conn = mysql_connect("localhost","root","usbw");
-mysql_select_db("presyohan",$conn);
+// $conn = mysql_connect("localhost","root","D3b1an!?");
+// mysql_select_db("presyohan",$conn);
+include 'db_connect.php';
+
 $result = mysql_query("SELECT * FROM users WHERE email='" . $_POST["email"] . "' and pw = '". $_POST["pw"]."'");
 $row  = mysql_fetch_array($result);
 if(is_array($row)) {
