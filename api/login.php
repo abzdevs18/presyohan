@@ -6,7 +6,7 @@ $list = array();
 $email = $_POST['email'];
 $pw = $_POST['pw'];
 
-$sql="INSERT INTO users (email, pw) VALUES('$email','$pw') WHERE email = $email AND pw = $pw";
+$sql="SELECT  email, pw FROM users WHERE email = $email AND pw = $pw";
 $result=mysqli_query($sql);
 
 if ($result) {
