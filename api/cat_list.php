@@ -9,7 +9,7 @@ while ($row = mysqli_fetch_assoc($query)) {
 	$data_q = "SELECT DISTINCT COUNT(prod_id) AS `num`,`prod_name`, `description` FROM `products` WHERE `prod_category` LIKE '" . $category . "'";
 	$q = mysqli_query($con, $data_q);
 	$res = mysqli_fetch_assoc($q);
-	array_push($list, array("prod_category"=>$row['cat'],"items"=>3));
+	array_push($list, array("prod_category"=>$row['cat'],"items"=>$res['num']));
 	// echo "<br />". $row['prod_name'] . "<br />";
 }
 
