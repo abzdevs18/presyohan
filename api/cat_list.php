@@ -1,5 +1,6 @@
 <?php
 include '../config.php';
+error_reporting(0);
 
 $list = array();
 $query = mysqli_query($con,"SELECT DISTINCT(prod_category) AS cat FROM `products`");
